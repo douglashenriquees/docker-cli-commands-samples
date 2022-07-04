@@ -16,7 +16,7 @@
 * ```docker container exec -it mysqldb /bin/bash```
   * o comando acima executa o **bash** do container em modo **interativo** em um **pseudo-terminal**
   * ```mysql -u root -p``` loga no mysql dentro do container
-  * ```create database exemplo_db;``` cria um nova base de dados
+  * ```create database exemplo_db;``` cria uma nova base de dados
   * ```show databases;``` exibe as bases de dados
 
 # Portas
