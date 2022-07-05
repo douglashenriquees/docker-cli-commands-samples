@@ -9,7 +9,7 @@
 ## Volume MySql DB
 
 * ```docker volume create volumedb```
-* ```docker container run -d --name mysqldb -v volumedb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=strongpass --platform linux/x86_64 mysql:5.7```
+* ```docker container run -d --name mysqldb -p 3306:3306 -v volumedb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=strongpass --platform linux/x86_64 mysql:5.7```
   *  ```-d``` executa o container em **background**
   *  ```-e``` define a variável de ambiente exigida pela imagem do mysql para o **password**
   * ```--platform linux/x86_64``` especifica a arquitetura do **host** que está obtendo a imagem
