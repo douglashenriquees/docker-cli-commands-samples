@@ -1,7 +1,7 @@
 ## Volumes
 
 *  ```docker container run -it -v $(pwd)/volume-alpine:/usr/share alpine```
-    * ```$(pwd)``` é o diretório atual
+  * ```$(pwd)``` é o diretório atual
 * ```echo 'teste de volume no alpine' > /usr/share/teste.txt```
 * ```cat /usr/share/teste.txt```
 
