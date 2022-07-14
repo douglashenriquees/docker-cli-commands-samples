@@ -21,7 +21,7 @@
 
 * ```docker container run -d -p 4400:80 -v $(pwd)/html:/usr/share/nginx/html nginx```
 
-## Networks
+## Redes
 
 * ```docker network create --driver bridge network-alpine```
   * o **driver** padrão é o **bridge**. O parâmetro ```--driver bridge``` pode ser suprimido
