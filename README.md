@@ -21,6 +21,21 @@
 
 * ```docker container run -d -p 4400:80 -v $(pwd)/html:/usr/share/nginx/html nginx```
 
+## Networks
+
+* ```docker network create --driver bridge network-alpine```
+  * o **driver** padrão é o **bridge**. O parâmetro ```--driver bridge``` pode ser suprimido
+* ```docker container run -it --name alp1 --net network-alpine alpine```
+  * definindo a rede interna para o container com o parâmetro ```--net```
+  * ```hostname -i```dentro do container **alp1** retorna o **IP** **172.19.0.2**
+* ```docker container run -it --name alp2 --net network-alpine alpine```
+  * ```hostname -i```dentro do container **alp2** retorna o **IP** **172.19.0.3**
+  * ```ping alp1``` demonstra que em redes customizadas é possível encontrar os containers pelo nome
+* ```docker container run -it --name alp3 alpine```
+  * o container **alp3** foi criado na rede padrão **bridge**, por não ter sido informado o parâmetro ```--net nome_da_rede```
+  * ```docker container inspect alp3```
+  * ```docker network connect network-alpine alp3```
+
 ## Imagens - Build
 
 * ```cd images```
