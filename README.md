@@ -5,7 +5,7 @@
 * ```echo 'teste de volume no alpine' > /usr/share/teste.txt```
 * ```cat /usr/share/teste.txt```
 
-## Volume MySql DB
+## Volume MySql
 
 * ```docker container run --name mysqldb -d -p 3306:3306 -v $(pwd)/volume-mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=strongpass --platform linux/x86_64 mysql:5.7```
   * ```-d``` executa o container em **background**
