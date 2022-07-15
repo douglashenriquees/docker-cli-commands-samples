@@ -32,9 +32,9 @@
   * ```hostname -i```dentro do container **alp2** retorna o **IP** **172.19.0.3**
   * ```ping alp1``` demonstra que em redes customizadas é possível encontrar os containers pelo nome
 * ```docker container run -it --name alp3 alpine```
-  * o container **alp3** foi criado na rede padrão **bridge**, por não ter sido informado o parâmetro ```--net nome_da_rede```
+  * o container **alp3** foi criado na rede padrão **bridge**, por não ter sido informado o parâmetro ```--net```
   * ```docker container inspect alp3```
-  * ```docker network connect network-alpine alp3```
+  * ```docker network connect network-alpine alp3``` coloca o container na rede informada
 
 ## Imagens - Build
 
