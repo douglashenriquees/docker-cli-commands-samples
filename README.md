@@ -45,7 +45,7 @@
 * ```docker container run --name app-1 -e DBHOST=mysqldb --net database username/mvc-produtos:2.0```
 * ```docker container run --name app-2 -e DBHOST=mysqldb --net database username/mvc-produtos:2.0```
 * ```docker container run --name app-3 -e DBHOST=mysqldb --net database username/mvc-produtos:2.0```
-  * os containers de aplicação criados acima, chegam ao container da base de dados pelo seu nome, que está definido na variável de ambiente **DBHOST**, porque foram criados na mesma rede
+  * os containers de aplicação criados acima chegam ao container da base de dados pelo seu nome que está definido na variável de ambiente **DBHOST**. Eles foram criados na mesma rede
 * ```docker network connect app app-1```
 * ```docker network connect app app-2```
 * ```docker network connect app app-3```
